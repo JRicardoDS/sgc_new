@@ -1,0 +1,39 @@
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 2;
+}
+.carousel-control-prev {
+    left: -50px; /* Ajusta este valor para mover el botón más hacia la izquierda */
+}
+.carousel-control-next {
+    right: -50px; /* Ajusta este valor para mover el botón más hacia la derecha */
+}
+.nombre-centrado {
+    text-align: center;
+    font-family: "Arial, Times New Roman", Georgia, Serif;
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tu preferencia */
+    color:  #000000;/*#0A61BE;*/ /* Color del texto */
+    font-weight: bold; /* Texto en negritas */
+    background-color: #f0f0f0; /* Color de fondo */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    margin: 20px auto; /* Espaciado externo */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    border: 2px solid #007BFF; /* Contorno (borde) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px #007BFF; /* Sombra para dar profundidad */
+    margin: 20px auto; /* Espaciado externo */
+    width: fit-content; /* Ajusta el ancho al contenido */
+}
+.carousel-iframe {
+margin: 20px; /* Agrega el margen deseado */
+border: 2px solid #007BFF; /* Contorno (borde) */
+border-radius: 8px; /* Bordes redondeados */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}

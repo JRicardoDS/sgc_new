@@ -1,0 +1,12 @@
+.image-container {
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente al centro */
+    align-items: center; /* Alinea verticalmente al centro */
+    height: 80vh; /* Ocupa todo el alto disponible de la ventana */
+}
+
+.image-container img {
+    max-width: 100vh; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 100vh; /* Asegura que la imagen no exceda el alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+}

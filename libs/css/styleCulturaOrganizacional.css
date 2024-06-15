@@ -1,0 +1,33 @@
+.quality-container {
+    padding: 20px; /* Espaciado interno del container */
+}
+
+.quality-table {
+    width: 100%;
+    border-collapse: collapse; /* Para eliminar los espacios entre celdas */
+}
+
+.quality-content {
+    padding-right: 20px; /* Espaciado a la derecha para separar el contenido del icono */
+    padding-left: 20px;/* Espaciado a la derecha para separar el contenido del icono */
+}
+
+.quality-icon img {
+    max-width: 60%; /* Para asegurar que la imagen del icono se ajuste al ancho de la celda */
+    opacity: 0.5; /* Reducir la opacidad */
+}
+
+/* CSS */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    height: 70vh;           /* Ajusta la altura según sea necesario */
+}
+
+.image-container img {
+    width: 100px;
+    max-width: 20vh;
+    max-height: 20vh;
+    /* Agrega cualquier otro estilo que necesites para la imagen */
+}

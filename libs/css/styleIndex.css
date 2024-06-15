@@ -1,0 +1,293 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #1a5276;
+}
+
+#parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 130%;
+    height: 130%;
+    z-index: -1;
+    background-image: url('../../dist/img/Fondo_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.1s ease-out;
+}
+
+header {
+    background-color: #d0e1e8;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height: 12%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-style: italic; /* Aplicar fuente cursiva */
+    color: #1a5276; /* Cambiar color a azul oscuro */
+    text-align: center; /* Centrar el texto */
+    width: 100%; /* Ajustar ancho del texto al 100% */
+}
+
+header img {
+    max-width: 50%;
+    max-height: 120%;
+    height: auto;
+}
+
+footer {
+    background-color: #1a5276;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    position: relative;
+    z-index: 1;
+}
+
+.container-outer {
+    border: 2px solid #2199c9;
+    background-color: #2199c9;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    /* Posicionamiento relativo para el elemento .luz */
+    position: relative;
+    z-index: 2; /* Asegura que este div esté sobre la luz */
+}
+
+.container-inner {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    z-index: 3; /* Asegura que este div esté sobre el contenedor externo */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid #1a5276;
+    outline: none;
+    transition: border-color 0.3s ease;
+    text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0px 0px 10px #1a5276;
+    border: none;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #1a5276;
+}
+
+.btn-login {
+    background-color: #1a5276;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-login:hover {
+    background-color: #0e2b44 !important; /* Agregamos !important para priorizar este estilo */
+}
+
+/*Responsibe*/
+@media screen and (max-width: 600px) {
+    header img:nth-child(1) {
+        display: block;
+    }
+
+    header img.imagen2 {
+        display: none; /* Ocultar la segunda imagen en pantallas pequeñas */
+    }
+
+    header img {
+        max-width: 100%;
+        max-height: 100%; 
+        height: 100%;
+    }
+
+    footer {
+        position: relative; /* Para que el footer no quede fijo en dispositivos móviles */
+    }
+
+    /* Oculta la segunda imagen del encabezado en pantallas pequeñas */
+    header img:nth-child(2) {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 16px; /* Cambiar el tamaño del texto a 16px */
+        font-style: italic; /* Aplicar fuente cursiva */
+        color: #1a5276; /* Cambiar color a azul oscuro */
+        text-align: center; /* Centrar el texto */
+        width: 100%; /* Ajustar ancho del texto al 100% */
+    }
+}
+
+/* Efecto de luz giratoria */
+@keyframes girarLuz {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.7;
+    }
+}
+
+.luz {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-color: white;
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: girarLuz 10s infinite linear;
+    z-index: 1; /* Asegura que la luz esté detrás de los contenedores */
+}
+
+@media screen and (max-width: 900px) {
+    header img:nth-child(1) {
+        display: block;
+    }
+
+    
+
+    header img {
+        max-width: 100%;
+        max-height: 60%; 
+        height: 100%;
+    }
+
+    footer {
+        position: relative; /* Para que el footer no quede fijo en dispositivos móviles */
+    }
+
+    /* Oculta la segunda imagen del encabezado en pantallas pequeñas */
+   
+    header h1 {
+        font-size: 15px; /* Cambiar el tamaño del texto a 16px */
+        font-style: italic; /* Aplicar fuente cursiva */
+        color: #1a5276; /* Cambiar color a azul oscuro */
+        text-align: center; /* Centrar el texto */
+        width: 100%; /* Ajustar ancho del texto al 100% */
+       
+    }
+
+    .luz {
+        position: absolute;
+        width: 200vw; /* Ancho relativo al ancho de la ventana */
+        height: 200vh; /* Alto relativo al alto de la ventana */
+        top: -50%;
+        left: -50%;
+        background-color: white;
+        opacity: 0.3;
+        border-radius: 50%;
+        animation: girarLuz 10s infinite linear;
+        z-index: 1; /* Asegura que la luz esté detrás de los contenedores */
+    }
+}
+
+ /*Responsibe*/
+ @media screen and (max-width: 800px) {
+    header img:nth-child(1) {
+        display: block;
+    }
+
+    header img.imagen2 {
+        display: none; /* Ocultar la segunda imagen en pantallas pequeñas */
+    }
+
+    header img {
+        max-width: 100%;
+        max-height: 100%; 
+        height: 100%;
+    }
+
+    footer {
+        position: relative; /* Para que el footer no quede fijo en dispositivos móviles */
+    }
+
+    /* Oculta la segunda imagen del encabezado en pantallas pequeñas */
+    header img:nth-child(2) {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 16px; /* Cambiar el tamaño del texto a 16px */
+        font-style: italic; /* Aplicar fuente cursiva */
+        color: #1a5276; /* Cambiar color a azul oscuro */
+        text-align: center; /* Centrar el texto */
+        width: 100%; /* Ajustar ancho del texto al 100% */
+    }
+
+    .luz {
+        position: absolute;
+        width: 200vw; /* Ancho relativo al ancho de la ventana */
+        height: 200vh; /* Alto relativo al alto de la ventana */
+        top: -50%;
+        left: -50%;
+        background-color: white;
+        opacity: 0.3;
+        border-radius: 50%;
+        animation: girarLuz 10s infinite linear;
+        z-index: 1; /* Asegura que la luz esté detrás de los contenedores */
+    }
+}
+
+input.error {
+    border: 2px solid red !important; /* !important para priorizar este estilo */
+    box-shadow: 0 0 5px red !important; /* Agregar sombra roja */
+}
